@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - test com-ic</title>
+  
+  
+  
+  
+<style>
+@font-face {
+		font-family: 'SequentialistBB';
+		src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_1_0.woff2') format('woff2'),
+		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/306FA6_0_0.woff') format('woff');
+		font-style: normal;
+		font-weight: 400;
+		}
+	
+* { 
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
+.comic { 
+  display:flex; 
+  flex-wrap:wrap; 
+  font-family:'Indie Flower'; font-family: SequentialistBB, cursive; 
+    font-size: 1.5vw; 
+    margin: 0;
+  padding:1vmin; }
+
+html, body {
+  margin:0;
+  padding:0;
+}
+
+
+.panel {
+  background-color:#fff;
+  border:solid 2px #000;
+  box-shadow:0 6px 6px -6px #000;
+  display:inline-block;
+  flex:1 1;
+  height:200px;
+  margin:1vmin;
+  overflow:hidden;
+  position:relative;
+  /*transform: rotate(2deg);*/
+}
+.right {
+    text-align: right;
+}
+
+.text {
+  background-color:#fff;
+  border:solid 2px #000;
+  margin:0;
+  padding:3px 5px;
+}
+
+.top-left {
+  left:-6px;
+  position:absolute;
+  top:-2px;
+  transform:skew(-15deg);
+}
+
+.bottom-right {
+  bottom:-2px;
+  position:absolute;
+  right:-6px;
+  transform:skew(-15deg);
+}
+
+.speech {
+  background-color:#fff;
+  border:solid 2px #000;
+  /*border-style: double;*/
+  /*border-width: thick;*/
+  border-radius:12px;
+  display:inline-block;
+  margin:.5em;
+  padding:.1em .2em;
+  position:relative;
+}
+
+.speech:before {
+  border:solid 12px transparent;
+  border-left:solid 12px #000;
+  border-top:solid 12px #000;
+  bottom:-24px;
+  content:"";
+  height:0;
+  left:14px;
+  position:absolute;
+  transform:
+    scale(-1,1) 
+    skew(-15deg);
+  width:0;
+}
+
+.speech:after {
+  border:solid 10px transparent;
+  border-left:solid 10px #fff;
+  border-top:solid 10px #fff;
+  bottom:-19px;
+  content:"";
+  height:0;
+  left:15px;
+  position:absolute;
+  transform:
+    scale(-1,1) 
+    skew(-15deg);
+    
+  width:0;
+}
+
+.panel:nth-child(1) {
+  flex-basis: 400px;
+}
+.panel:nth-child(2) {
+  flex-basis: 200px;
+}
+.panel:nth-child(3) {
+  flex-basis: 200px;
+}
+.panel:nth-child(4) {
+  flex-basis: 200px;
+}
+.panel:nth-child(5) {
+  flex-basis: 200px;
+}
+.panel:nth-child(6) {
+  flex-basis: 200px;
+}
+.panel:nth-child(7) {
+  flex-basis: 400px;
+}
+.panel:nth-child(8) {
+  flex-basis: 200px;
+}
+.panel:nth-child(9) {
+  flex-basis: 200px;
+}
+
+/* background colours */
+
+.panel:nth-child(4n+1) {
+  background-image:radial-gradient(circle, yellow, orange);
+}
+
+.panel:nth-child(4n+2) {
+  background-image:radial-gradient(circle, lightblue, deepskyblue);
+}
+
+.panel:nth-child(4n+3) {
+  background-image:radial-gradient(circle, palegreen, yellowgreen);
+}
+
+.panel:nth-child(4n+4) {
+  background-image:radial-gradient(circle, lightcoral, tomato);
+}
+
+button{
+  opacity:0.5;
+  font-size:2rem;
+  margin: 0.5rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+  height: 100%;
+  text-align:center;
+}
+.wrapper{
+  margin-top: auto;
+}
+.video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <article class="comic">
+  <div class="panel">
+    <video class="video" poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline="" autoplay="autoplay" muted="muted" loop="">
+<source src="CodePen%20-%20test%20com-ic_files/polina.webm" type="video/webm">
+  </video>
+    <p class="text top-left">Suddenly...<br>erfer r<br>erfer r<br>erfer r<br>erfer r</p>
+    <p class="text bottom-right">...something amazing happened</p>
+  </div>
+  <div class="panel">
+    
+    <p class="text top-left">Try resizing...</p>
+    <p class="text bottom-right">...it's responsive</p>
+  </div>
+  <div class="panel">
+    <div class="right">
+    <p class="speech">Aa  lkjg lg lg</p>
+    </div>
+    <p class="speech">Aa lkhj lkh lkh</p>
+  </div>
+  <div class="panel"></div>
+  <div class="panel"></div>
+  <div class="panel"></div>
+  <div class="panel"></div>
+  <div class="panel"></div>
+  <div class="panel">
+    <p class="text bottom-right">THE END</p>
+  </div>
+</article>
+
+<div class="container">
+<div class="wrapper">
+  <button>button 1</button>
+  <button>button 2</button>
+  </div>
+  </div>
+  
+  
+  
+  
+
+
+
+
+ 
+</body></html>
