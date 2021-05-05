@@ -1,4 +1,4 @@
 # minijs
-Some projects don't have built
+Some projects didn't build
 
 So I made this project to give them lives :)
